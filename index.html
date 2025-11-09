@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/09/21/new/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/09/21/new/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-09-21 10:11:44 / 修改时间：10:17:36" itemprop="dateCreated datePublished" datetime="2025-09-21T10:11:44+08:00">2025-09-21</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>1 2 3,5,7<br>1 3 4,5,7,8<br>1 4 5,7<br>1 5 6,7,8<br>1 6 7<br>1 7 8</p>
+<p>2 3 5,7<br>2 4 5,7<br>2 5 7<br>2 6 7<br>2 7 8</p>
+<p>3 4 5,7<br>3 5 7,8<br>3 7 8</p>
+<p>4 5 6,7<br>4 6 7</p>
+<p>4 7 8</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/08/30/godot%E5%AD%90%E5%BC%B9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/08/30/godot%E5%AD%90%E5%BC%B9/" class="post-title-link" itemprop="url">godot子弹</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-08-30 20:48:39" itemprop="dateCreated datePublished" datetime="2025-08-30T20:48:39+08:00">2025-08-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-08-31 18:56:52" itemprop="dateModified" datetime="2025-08-31T18:56:52+08:00">2025-08-31</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="一-RigidBody2D"><a href="#一-RigidBody2D" class="headerlink" title="一.RigidBody2D"></a>一.RigidBody2D</h1><p>如果您希望<strong>玩家角色本身就是枪</strong>，那么整个逻辑会变得更简单、更直接。您不需要独立的枪节点，可以直接在玩家脚本中处理子弹的生成和发射。</p>
+<hr>
+<h3 id="1-准备子弹场景"><a href="#1-准备子弹场景" class="headerlink" title="1. 准备子弹场景"></a>1. 准备子弹场景</h3><p>这一步和之前一样。您仍然需要一个<strong>子弹场景</strong> (<code>.tscn</code> 文件)，它的根节点是 <code>RigidBody3D</code> (3D) 或 <code>RigidBody2D</code> (2D)，并附加一个脚本来控制它的移动和销毁。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># bullet.gd</span><br><span class="line">extends RigidBody3D</span><br><span class="line"></span><br><span class="line">@export var speed = 20.0</span><br><span class="line">@export var life_time = 3.0</span><br><span class="line"></span><br><span class="line">func _ready():</span><br><span class="line">    var timer = get_tree().create_timer(life_time)</span><br><span class="line">    timer.timeout.connect(self.queue_free)</span><br><span class="line"></span><br><span class="line">func _physics_process(delta):</span><br><span class="line">    # 子弹沿其局部坐标系的 Z 轴前进</span><br><span class="line">    linear_velocity = -transform.basis.z * speed</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="2-在玩家脚本中处理发射逻辑"><a href="#2-在玩家脚本中处理发射逻辑" class="headerlink" title="2. 在玩家脚本中处理发射逻辑"></a>2. 在玩家脚本中处理发射逻辑</h3><p>现在，所有的发射代码都将集成到<strong>玩家角色的脚本</strong>中。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"># player.gd</span><br><span class="line">extends CharacterBody3D # 或者 CharacterBody2D</span><br><span class="line"></span><br><span class="line"># 预加载子弹场景</span><br><span class="line">@export var bullet_scene: PackedScene</span><br><span class="line"></span><br><span class="line"># 发射子弹的冷却时间，单位为秒</span><br><span class="line">@export var fire_rate = 0.2</span><br><span class="line"></span><br><span class="line">var can_shoot = true</span><br><span class="line"></span><br><span class="line">func _input(event):</span><br><span class="line">    # 当按下 &quot;shoot&quot; 动作且可以射击时</span><br><span class="line">    if event.is_action_pressed(&quot;shoot&quot;) and can_shoot:</span><br><span class="line">        shoot()</span><br><span class="line">        can_shoot = false</span><br><span class="line">        </span><br><span class="line">        # 使用定时器来控制射击冷却</span><br><span class="line">        var timer = get_tree().create_timer(fire_rate)</span><br><span class="line">        timer.timeout.connect(func(): can_shoot = true)</span><br><span class="line"></span><br><span class="line"># 发射子弹的函数</span><br><span class="line">func shoot():</span><br><span class="line">    # 实例化一个子弹</span><br><span class="line">    var bullet = bullet_scene.instantiate()</span><br><span class="line">    </span><br><span class="line">    # 将子弹的全局位置和旋转设置为玩家的位置和旋转</span><br><span class="line">    bullet.global_transform = self.global_transform</span><br><span class="line">    </span><br><span class="line">    # 将子弹添加到场景树中</span><br><span class="line">    get_tree().root.add_child(bullet)</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这种方法将玩家和“枪”的功能合并成一个实体，让代码更集中，特别适合第一人称射击游戏（FPS）或一些简单的自上而下射击游戏。</p>
+<ol>
+<li><strong>子弹场景</strong>：依然是独立的，负责自身的移动和生命周期。</li>
+<li><strong>玩家脚本</strong>：直接实例化子弹，并设置子弹的初始<strong>位置和方向</strong>与玩家一致。</li>
+<li><strong>冷却时间</strong>：通过一个简单的计时器，您可以轻松控制子弹的发射频率，避免玩家一次性发射过多子弹。</li>
+</ol>
+<p>这种实现方式更简洁、高效，因为您省去了处理额外节点层级（比如枪节点和发射点）的麻烦。</p>
+<h1 id="二-Area2D"><a href="#二-Area2D" class="headerlink" title="二.Area2D"></a>二.Area2D</h1><h2 id="Godot-4-4-1-让玩家化身“神枪手”——使用Area2D实现内置射击功能"><a href="#Godot-4-4-1-让玩家化身“神枪手”——使用Area2D实现内置射击功能" class="headerlink" title="Godot 4.4.1: 让玩家化身“神枪手”——使用Area2D实现内置射击功能"></a>Godot 4.4.1: 让玩家化身“神枪手”——使用Area2D实现内置射击功能</h2><p>在Godot 4.4.1中，将玩家角色自身设计为“枪”是一种新颖且高效的机制，尤其适用于快节奏的射击游戏或需要精确碰撞检测的场景。通过巧妙运用<code>Area2D</code>节点，我们可以轻松实现这一功能，无论是发射独立的子弹，还是让玩家自身产生一个瞬时的“攻击范围”。</p>
+<p>本文将详细介绍两种核心实现方法：</p>
+<ol>
+<li><strong>玩家作为发射器</strong>: 从玩家位置实例化并发射独立的“子弹”场景。</li>
+<li><strong>玩家即武器</strong>: 直接利用玩家自身的<code>Area2D</code>节点来检测攻击命中。</li>
+</ol>
+<h3 id="准备工作：创建玩家和“子弹”场景"><a href="#准备工作：创建玩家和“子弹”场景" class="headerlink" title="准备工作：创建玩家和“子弹”场景"></a>准备工作：创建玩家和“子弹”场景</h3><p>在开始之前，请确保你已经有一个基本的玩家场景。通常，这个场景会包含一个<code>CharacterBody2D</code>作为根节点，并附带一个<code>Sprite2D</code>（或<code>AnimatedSprite2D</code>）和<code>CollisionShape2D</code>。</p>
+<h4 id="1-设置子弹场景-如果选择方法一"><a href="#1-设置子弹场景-如果选择方法一" class="headerlink" title="1. 设置子弹场景 (如果选择方法一)"></a>1. 设置子弹场景 (如果选择方法一)</h4><p>如果希望玩家发射可见的飞行道具，首先需要创建一个“子弹”场景。</p>
+<ul>
+<li><p><strong>节点结构</strong>:</p>
+<ul>
+<li><code>Area2D</code> (命名为 <code>Bullet</code>)<ul>
+<li><code>Sprite2D</code> (用于显示子弹外观)</li>
+<li><code>CollisionShape2D</code> (定义子弹的碰撞范围)</li>
+<li><code>VisibleOnScreenNotifier2D</code> (可选，用于在子弹离开屏幕时销毁，优化性能)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>为子弹添加脚本 (<code>bullet.gd</code>)</strong>:<br>附加一个脚本到<code>Bullet</code>根节点，用于控制其移动和碰撞逻辑。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">extends Area2D</span><br><span class="line"></span><br><span class="line">var speed = 800</span><br><span class="line">var direction = Vector2.RIGHT # 默认向右</span><br><span class="line"></span><br><span class="line">func _physics_process(delta):</span><br><span class="line">    # 沿指定方向移动</span><br><span class="line">    global_position += direction * speed * delta</span><br><span class="line"></span><br><span class="line"># 连接Area2D的body_entered信号</span><br><span class="line">func _on_body_entered(body):</span><br><span class="line">    # 检查是否击中敌人或障碍物</span><br><span class="line">    if body.is_in_group(&quot;enemies&quot;):</span><br><span class="line">        body.queue_free() # 销毁敌人</span><br><span class="line">    queue_free() # 销毁子弹自身</span><br><span class="line"></span><br><span class="line"># (可选) 连接VisibleOnScreenNotifier2D的screen_exited信号</span><br><span class="line">func _on_visible_on_screen_notifier_2d_screen_exited():</span><br><span class="line">    queue_free()</span><br></pre></td></tr></table></figure>
+
+<p><strong>信号连接</strong>: 在Godot编辑器中，选中<code>Bullet</code>节点的<code>Node</code>面板，将<code>body_entered</code>信号连接到<code>_on_body_entered</code>函数。如果使用了<code>VisibleOnScreenNotifier2D</code>，也同样连接其<code>screen_exited</code>信号。</p>
+</li>
+</ul>
+<hr>
+<h3 id="方法一：玩家作为发射器"><a href="#方法一：玩家作为发射器" class="headerlink" title="方法一：玩家作为发射器"></a>方法一：玩家作为发射器</h3><p>这种方法最为常见，玩家角色将作为“子弹”场景的生成点和发射方向的来源。</p>
+<h4 id="1-完善玩家节点结构"><a href="#1-完善玩家节点结构" class="headerlink" title="1. 完善玩家节点结构"></a>1. 完善玩家节点结构</h4><p>在你的玩家场景中，添加一个<code>Marker2D</code>节点，并将其命名为<code>Muzzle</code>（枪口）。将这个节点放置在你希望子弹生成的位置，例如玩家精灵的前方。</p>
+<ul>
+<li><strong>玩家场景结构</strong>:<ul>
+<li><code>CharacterBody2D</code> (Player)<ul>
+<li><code>Sprite2D</code></li>
+<li><code>CollisionShape2D</code></li>
+<li><code>Muzzle</code> (<code>Marker2D</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-编写玩家射击脚本"><a href="#2-编写玩家射击脚本" class="headerlink" title="2. 编写玩家射击脚本"></a>2. 编写玩家射击脚本</h4><p>在玩家的脚本中，我们需要加载子弹场景，并在玩家输入时实例化它。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"># player.gd</span><br><span class="line">extends CharacterBody2D</span><br><span class="line"></span><br><span class="line"># 预加载子弹场景</span><br><span class="line">const BULLET_SCENE = preload(&quot;res://bullet.tscn&quot;)</span><br><span class="line"></span><br><span class="line">@onready var muzzle = $Muzzle</span><br><span class="line"></span><br><span class="line">func _unhandled_input(event):</span><br><span class="line">    # 当按下&quot;shoot&quot;输入动作时</span><br><span class="line">    if event.is_action_pressed(&quot;shoot&quot;):</span><br><span class="line">        shoot()</span><br><span class="line"></span><br><span class="line">func shoot():</span><br><span class="line">    # 实例化子弹</span><br><span class="line">    var bullet_instance = BULLET_SCENE.instantiate()</span><br><span class="line"></span><br><span class="line">    # 设置子弹的初始位置和方向</span><br><span class="line">    # 使用muzzle的全局位置和旋转，确保子弹在世界空间中正确定位</span><br><span class="line">    bullet_instance.global_transform = muzzle.global_transform</span><br><span class="line"></span><br><span class="line">    # 为了避免子弹跟随玩家移动，必须将其添加到主场景树中</span><br><span class="line">    # get_tree().root.add_child(bullet_instance) 是一种方法，但更好的方法是让关卡场景来管理</span><br><span class="line">    get_parent().add_child(bullet_instance)</span><br></pre></td></tr></table></figure>
+
+<p><strong>关键点</strong>:</p>
+<ul>
+<li><strong><code>preload</code></strong>: 提前加载子弹场景以获得更好的性能。</li>
+<li><strong><code>instantiate()</code></strong>: 创建子弹场景的一个新实例。</li>
+<li><strong><code>global_transform</code></strong>: 将<code>Muzzle</code>节点的全局位置、旋转和缩放信息直接赋给子弹实例，可以确保子弹在发射时朝向正确的方向。</li>
+<li><strong><code>get_parent().add_child()</code></strong>: 这是至关重要的一步。如果直接<code>add_child(bullet_instance)</code>，子弹会成为玩家的子节点，并跟随玩家移动。将其添加到玩家的父节点（通常是主关卡场景）可以使其独立运动。</li>
+</ul>
+<p><strong>输入映射</strong>: 别忘了在 <code>项目 -&gt; 项目设置 -&gt; 输入映射</code> 中添加一个名为 <code>shoot</code> 的输入动作，并为其绑定一个按键（例如鼠标左键或空格键）。</p>
+<hr>
+<h3 id="方法二：玩家即武器-瞬时攻击范围"><a href="#方法二：玩家即武器-瞬时攻击范围" class="headerlink" title="方法二：玩家即武器 (瞬时攻击范围)"></a>方法二：玩家即武器 (瞬时攻击范围)</h3><p>这种方法更适合近战攻击或者范围效果，玩家的<code>Area2D</code>会暂时启用，检测范围内的敌人。</p>
+<h4 id="1-设置玩家的攻击Area2D"><a href="#1-设置玩家的攻击Area2D" class="headerlink" title="1. 设置玩家的攻击Area2D"></a>1. 设置玩家的攻击Area2D</h4><p>在玩家场景中，直接添加一个<code>Area2D</code>节点，并为其配置碰撞形状。</p>
+<ul>
+<li><strong>玩家场景结构</strong>:<ul>
+<li><code>CharacterBody2D</code> (Player)<ul>
+<li><code>Sprite2D</code></li>
+<li><code>CollisionShape2D</code> (用于物理碰撞)</li>
+<li><code>AttackArea</code> (<code>Area2D</code>)<ul>
+<li><code>AttackCollisionShape</code> (<code>CollisionShape2D</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>将<code>AttackCollisionShape</code>的形状调整为你希望的攻击范围，例如玩家前方的一个矩形或圆形。在默认情况下，可以禁用这个碰撞形状，只在攻击时启用。</p>
+<h4 id="2-编写攻击逻辑脚本"><a href="#2-编写攻击逻辑脚本" class="headerlink" title="2. 编写攻击逻辑脚本"></a>2. 编写攻击逻辑脚本</h4><p>在玩家脚本中，我们将通过代码来控制<code>AttackArea</code>的碰撞检测。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"># player.gd</span><br><span class="line">extends CharacterBody2D</span><br><span class="line"></span><br><span class="line">@onready var attack_area = $AttackArea</span><br><span class="line">@onready var attack_collision_shape = $AttackArea/AttackCollisionShape</span><br><span class="line"></span><br><span class="line">func _ready():</span><br><span class="line">    # 默认禁用攻击范围，避免持续检测</span><br><span class="line">    attack_collision_shape.disabled = true</span><br><span class="line"></span><br><span class="line">func _unhandled_input(event):</span><br><span class="line">    if event.is_action_pressed(&quot;shoot&quot;):</span><br><span class="line">        attack()</span><br><span class="line"></span><br><span class="line">func attack():</span><br><span class="line">    # 启用碰撞形状</span><br><span class="line">    attack_collision_shape.disabled = false</span><br><span class="line"></span><br><span class="line">    # 获取当前重叠的物体</span><br><span class="line">    var overlapping_bodies = attack_area.get_overlapping_bodies()</span><br><span class="line">    for body in overlapping_bodies:</span><br><span class="line">        if body.is_in_group(&quot;enemies&quot;):</span><br><span class="line">            print(&quot;击中敌人: &quot;, body.name)</span><br><span class="line">            body.queue_free() # 或者调用一个 take_damage() 方法</span><br><span class="line"></span><br><span class="line">    # 为了让攻击效果是瞬时的，在一帧之后或短暂延迟后禁用碰撞形状</span><br><span class="line">    # 使用 await 创建一个短暂的计时器</span><br><span class="line">    await get_tree().create_timer(0.1).timeout</span><br><span class="line">    attack_collision_shape.disabled = true</span><br></pre></td></tr></table></figure>
+
+<p><strong>关键点</strong>:</p>
+<ul>
+<li><strong>动态启用&#x2F;禁用</strong>: 通过控制<code>CollisionShape2D</code>的<code>disabled</code>属性，我们可以在需要时才进行碰撞检测，极大地提升了性能。</li>
+<li><strong><code>get_overlapping_bodies()</code></strong>: <code>Area2D</code>的核心功能之一，可以立即获取当前正与其重叠的所有<code>PhysicsBody2D</code>（如<code>CharacterBody2D</code>, <code>RigidBody2D</code>）节点的列表。</li>
+<li><strong><code>await get_tree().create_timer()</code></strong>: 这是一个在GDScript中创建延迟的便捷方法。我们利用它来确保攻击判定只在攻击发生的瞬间有效，而不是一个持续的状态。</li>
+</ul>
+<h3 id="总结与选择"><a href="#总结与选择" class="headerlink" title="总结与选择"></a>总结与选择</h3><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>方法一：玩家作为发射器</th>
+<th>方法二：玩家即武器</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>适用场景</strong></td>
+<td>远程攻击、需要飞行时间的子弹、弹幕游戏</td>
+<td>近战攻击、光束武器、冲击波、即时命中（Hitscan）</td>
+</tr>
+<tr>
+<td><strong>视觉表现</strong></td>
+<td>子弹是独立的、可见的实体</td>
+<td>攻击效果通常通过动画或粒子效果表现</td>
+</tr>
+<tr>
+<td><strong>性能开销</strong></td>
+<td>实例化大量子弹可能会有性能开销</td>
+<td>开销极低，因为没有创建新节点</td>
+</tr>
+<tr>
+<td><strong>实现复杂度</strong></td>
+<td>需要管理独立的子弹场景</td>
+<td>逻辑集中在玩家脚本中，相对简单</td>
+</tr>
+</tbody></table>
+<p>选择哪种方法取决于你的游戏设计。对于传统的射击游戏，<strong>方法一</strong>是标准且灵活的选择。而对于动作游戏中的剑砍、拳击，或是科幻游戏中的短程能量爆发，<strong>方法二</strong>则更加高效和直接。你甚至可以在一个玩家身上结合这两种方法，实现多样化的攻击模式。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/08/07/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/08/07/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-08-07 22:14:44" itemprop="dateCreated datePublished" datetime="2025-08-07T22:14:44+08:00">2025-08-07</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
