@@ -399,11 +399,33 @@ td {
   transition-delay: 0s;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-  background: #fff;
-  border: 0;
-  font-size: 0.8125em;
+  color: #fff;
+  font-size: 14px;
   right: 0;
-  top: 0;
+  top: 2px;
+}
+.highlight-container {
+  background: #21252b;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px 0 rgba(0,0,0,0.4);
+  padding-top: 30px;
+}
+.highlight-container::before {
+  background: #fc625d;
+  border-radius: 50%;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  content: ' ';
+  height: 12px;
+  left: 12px;
+  margin-top: -20px;
+  position: absolute;
+  width: 12px;
+}
+.highlight-container .highlight {
+  border-radius: 0 0 5px 5px;
+}
+.highlight-container .highlight .table-container {
+  border-radius: 0 0 5px 5px;
 }
 .highlight,
 pre {
@@ -1191,7 +1213,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #49e713;
+  background: #69afff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2845,11 +2867,13 @@ span.exturl:hover {
   background: #222;
 }
 .table-container {
-  background: rgba(240,240,222,0.2);
+  background: #fff;
 }
+/*
 .table-container :hover {
-  background: rgba(237,237,225,0.03);
+  background: rgba(237,237, 225, 0.03);
 }
+*/
 table > tbody > tr:nth-of-type(odd) {
   background-color: rgba(255,255,255,0);
 }
@@ -2860,9 +2884,12 @@ pre,
 .highlight {
   background: rgba(200,31,33,0);
 }
+/*
+//代码行标背景
 .highlight .gutter pre {
   background: rgbargba(227, 235, 227, 0.3);
 }
+*/
 .highlight .code pre {
   background: rgba(29,31,100,0);
 }
@@ -2873,7 +2900,6 @@ pre,
   border-left: 3px solid #dfa710;
   background: rgba(255,255,255,0.3);
 }
-/* 行内代码块的自定义样式 */
 code {
   color: #dfa710;
   background: rgba(239,183,48,0.4);
